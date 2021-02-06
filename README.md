@@ -1,31 +1,44 @@
 # react-node-heroku
 
--> Criação das pastas “Client” e “Server”;
+-> Criar as pastas “Client” e “Server”;
 
 -> sudo npm install -g express-generator;
 
--> npx create-react-app app1 na pasta Client;
+-> npx create-react-app app1 na pasta "Client";
 
--> express na pasta Server;
+-> express na pasta "Server";
 
--> npm install na pasta Server;
+-> npm install na pasta "Server";
 
--> npm run build na pasta app1;
+-> npm run build na pasta "app1";
 
 -> sudo npm install -g serve;
 
--> Recorte da pasta build da pasta Client para a pasta Server;
+-> Recortar a pasta build da pasta "Client" para a pasta "Server";
 
--> Acréscimo deste código ao arquivo app.js da pasta Server:
+-> Acrescentar este código ao arquivo "app.js" da pasta "Server":
 
 	app.use(express.static(path.join(__dirname, 'build')));
 
 	app.get('/*', (req, res) => {  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 	});
 
--> npm start na pasta Server;
+-> npm start na pasta "Server";
 
 -> http://localhost:3000/* no navegador;
+
+-> Criar repositório no GitHub adicionando arquivos da pasta "Server" MENOS node_modules;
+
+-> Heroku - Create new app - Deploy - Deployment method - GitHub;
+
+-> Conectar repositório do GitHub;
+
+-> Clicar em “Deploy Branch”;
+
+-> Heroku vai instalar todos os módulos Node;
+
+-> Clicar em “View” para visualizar o projeto.
+
 
 
 
